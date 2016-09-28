@@ -1,3 +1,4 @@
+var includePaths    = [].concat(require('bourbon').includePaths).concat(require('bourbon-neat').includePaths);
 var gulp            = require('gulp'),
     util            = require('gulp-util'),
     del             = require('del'),
@@ -14,7 +15,7 @@ var gulp            = require('gulp'),
 gulp.task('styles', function() {
     gulp.src('./src/scss/**/*.scss')
         .pipe(sass({
-                includePaths: require('bourbon').includePaths,
+                includePaths: includePaths,
                 style: 'uncompressed',
                 quiet: true
             }).on('error', sass.logError))
