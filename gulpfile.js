@@ -1,13 +1,15 @@
-var gulp        = require('gulp'),
-    del         = require('del'),
-    sass        = require('gulp-sass'),
-    prefixer    = require('gulp-autoprefixer'),
-    rename      = require('gulp-rename'),
-    browserSync = require('browser-sync'),
-    changed     = require('gulp-changed'),
-    minimizer   = require('gulp-imagemin'),
-    size        = require('gulp-size'),
-    webpack     = require('webpack-stream');
+var gulp            = require('gulp'),
+    util            = require('gulp-util'),
+    del             = require('del'),
+    sass            = require('gulp-sass'),
+    prefixer        = require('gulp-autoprefixer'),
+    rename          = require('gulp-rename'),
+    browserSync     = require('browser-sync'),
+    changed         = require('gulp-changed'),
+    minimizer       = require('gulp-imagemin'),
+    size            = require('gulp-size'),
+    webpack         = require('webpack-stream');
+
 
 gulp.task('styles', function() {
     gulp.src('./src/scss/**/*.scss')
