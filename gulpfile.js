@@ -70,5 +70,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function() {
-    gulp.start( 'clean', 'styles', 'scripts', 'images', 'html', 'watch', 'browser-sync');
+    gulp.start( ['clean'], 'styles', 'scripts', 'images', 'html', 'watch', 'browser-sync');
 });
